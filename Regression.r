@@ -1,5 +1,3 @@
-library(ggplot2)
-
 X <- c(182301, 232824, 265517, 307827, 450753, 484245,
 535776, 594604, 629684, 659109, 694050, 874305)
 y <- c(4761393, 5104714, 5023121, 5834911, 5599829,
@@ -12,6 +10,7 @@ model <- lm(y ~ X, data = data)
 summary(model)
 
 # Plot the results
+library(ggplot2)
 ylab <- c(2.5, 5.0, 7.5, 10)
 ggplot(data = data, mapping = aes(x = X, y = y)) +
     geom_point() +
